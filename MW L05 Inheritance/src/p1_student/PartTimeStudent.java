@@ -14,6 +14,11 @@ public class PartTimeStudent extends Student {
 		System.out.println("Credits: " + credits);
 		System.out.println("Tuition: " + (credits * PRICE_PER_CREDIT));
 	}
+	
+//	@Override
+//	public double calculateTuition() {
+//		return credits * PRICE_PER_CREDIT;
+//	}
 
 	@Override
 	public String toString() {
@@ -21,4 +26,7 @@ public class PartTimeStudent extends Student {
 	}
 	
 	
+//	public static void setPRICE_PER_CREDIT(double price) {
+//		PartTimeStudent.PRICE_PER_CREDIT = price;
+//	}
 }

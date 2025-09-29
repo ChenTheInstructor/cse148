@@ -24,6 +24,10 @@ public class Student {
 	public void setId(int id) {
 		this.id = id;
 	}
+	
+	public double calculateTuition() {
+		return 0.0;
+	}
 
 	@Override
 	public String toString() {

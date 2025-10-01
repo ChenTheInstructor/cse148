@@ -24,8 +24,9 @@ public class Cat extends Pet {
 		System.out.println("Meow...");
 	}
 
+	@Override
 	public String toString() {
-		return getName() + ": " + weight;
+		return "Cat [" + getName() + ", weight=" + weight + "]";
 	}
 	
 }

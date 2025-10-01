@@ -4,7 +4,7 @@ public class Pet {
 	private String name;
 
 	public Pet(String name) {
-		super();
+		super(); // calling superclass (Object)'s constructor. It must be the first line
 		this.name = name;
 	}
 

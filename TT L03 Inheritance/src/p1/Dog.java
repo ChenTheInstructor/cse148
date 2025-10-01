@@ -22,7 +22,7 @@ public class Dog extends Pet {
 
 	@Override
 	public String toString() {
-		return "Dog [Name=" + getName() + ", breed=" + breed + "]";
+		return "Dog [" + getName() + ", breed=" + breed + "]";
 	}
 
 	@Override

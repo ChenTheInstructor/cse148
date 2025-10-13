@@ -9,6 +9,18 @@ public class PartTimeStudent extends Student {
 		this.credits = credits;
 	}
 	
+	public int getCredits() {
+		return credits;
+	}
+
+	public void setCredits(int credits) {
+		this.credits = credits;
+	}
+
+	public static double getPricePerCredit() {
+		return PRICE_PER_CREDIT;
+	}
+
 	public void showInfo() {
 		System.out.println(super.toString());
 		System.out.println("Credits: " + credits);

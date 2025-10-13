@@ -20,6 +20,18 @@ public class FullTimeStudent extends Student {
 		return FLAT_RATE;
 	}
 
+	public int getSemesterCourses() {
+		return semesterCourses;
+	}
+
+	public void setSemesterCourses(int semesterCourses) {
+		this.semesterCourses = semesterCourses;
+	}
+
+	public static double getFlatRate() {
+		return FLAT_RATE;
+	}
+
 	@Override
 	public String toString() {
 		return "FullTimeStrudent [" + super.toString() + ", semesterCourses=" + semesterCourses + "]";

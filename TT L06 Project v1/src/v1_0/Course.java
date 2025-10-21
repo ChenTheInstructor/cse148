@@ -11,6 +11,12 @@ public class Course {
 		this.letterGrade = letterGrade;
 		CREDITS = cREDITS;
 	}
+	
+	public Course(String tITLE, int cREDITS) {
+		super();
+		TITLE = tITLE;
+		CREDITS = cREDITS;
+	}
 
 	public String getLetterGrade() {
 		return letterGrade;
@@ -30,10 +36,13 @@ public class Course {
 
 	@Override
 	public String toString() {
-		return "\nCourse\n[" + TITLE + ", " + letterGrade + ", " + CREDITS + "]";
+		return "\n\t[" + TITLE + ", " + letterGrade + ", " + CREDITS + "]";
 	}
 
 	public double getGradePoint() {
+		if(letterGrade == null) {
+			return -1.0;
+		}
 		return switch (letterGrade) {
 		case "A" -> 4.0;
 		case "B+" -> 3.5;

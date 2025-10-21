@@ -11,6 +11,16 @@ public class CourseBag {
 		count = 0;
 	}
 	
+	public int getCount() {
+		return count;
+	}
+	
+	
+
+	public Course[] getArray() {
+		return arr;
+	}
+
 	public boolean addCourse(Course course) {
 		if(course == null || course.getTITLE() == null || course.getTITLE().equals("")) {
 			return false;
@@ -22,7 +32,7 @@ public class CourseBag {
 	public int totalCredits() {
 		int total = 0;
 		for(int i = 0; i < count; i++) {
-			if(arr[i].getGradePoint() == -1.0) {
+			if(arr[i].getGradePoint() == -1.0 || arr[i].getLetterGrade() == null) {
 				continue;
 			}
 			total += arr[i].getCREDITS();
@@ -34,7 +44,7 @@ public class CourseBag {
 		double total = 0.0;
 		
 		for(int i = 0; i < count; i++) {
-			if(arr[i].getGradePoint() == -1.0) {
+			if(arr[i].getGradePoint() == -1.0 || arr[i].getLetterGrade() == null) {
 				continue;
 			}
 			total += (arr[i].getCREDITS() * arr[i].getGradePoint());
@@ -48,7 +58,11 @@ public class CourseBag {
 
 	@Override
 	public String toString() {
-		return "CourseBag [arr=" + Arrays.toString(arr) + "]";
+		String courses = "";
+		for(int i = 0; i < count; i++) {
+			courses += arr[i];
+		}
+		return "\nCourseBag \n[" + courses + "\n]\n";
 	}
 	
 	

@@ -1,7 +1,7 @@
 package v1_0;
 
 public class PartTimeStudent extends Student {
-	private static final double RATE_PER_CREDIT = 350;
+	
 //	private int credits;
 	
 	

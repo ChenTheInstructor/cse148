@@ -3,14 +3,58 @@ package v1_0;
 import java.util.Arrays;
 
 public class CourseBag {
-	private static final double DEANS_LIST_MINIMUM = 3.5;
 	private Course[] arr;
 	private int count;
 
-	public CourseBag(int maxSize) {
-		arr = new Course[maxSize];
+	public CourseBag() {
+		arr = new Course[Settings.MAX_COURSE_BAG_SIZE];
 		count = 0;
 	}
+	
+	public Course[] searchByLetterGrade(String letterGrade) {
+		Course[] temp = new Course[count];
+		int matchCount = 0;
+		for(int i = 0; i < count; i++) {
+			if(arr[i].getLetterGrade().equalsIgnoreCase(letterGrade)) {
+				temp[matchCount++] = arr[i];
+			}
+		}
+//		return temp;
+		return Arrays.copyOf(temp, matchCount);
+	}
+	
+	public Course searchByTitle(String title) {
+		for(int i = 0; i < count; i++) {
+			if(arr[i].getTITLE().equalsIgnoreCase(title)) {
+				return arr[i];
+			}
+		}
+		return null;
+	}
+
+	public Course[] getCourseArray() {
+		return arr;
+	}
+
+
+
+	public void setCourseArray(Course[] arr) {
+		this.arr = arr;
+	}
+
+
+
+	public int getCount() {
+		return count;
+	}
+
+
+
+	public void setCount(int count) {
+		this.count = count;
+	}
+
+
 
 	public boolean addCourse(Course course) {
 		if (course.getTITLE() == null || course == null || course.getTITLE().equals("")) {
@@ -22,7 +66,7 @@ public class CourseBag {
 	}
 	
 	public boolean isOnDeansList() {
-		if(calculateGPA() >= DEANS_LIST_MINIMUM) {
+		if(calculateGPA() >= Settings.DEANS_LIST_MINIMUM) {
 			return true;
 		} else {
 			return false;
@@ -74,7 +118,11 @@ public class CourseBag {
 
 	@Override
 	public String toString() {
-		return "CourseBag [arr=" + Arrays.toString(arr) + ", count=" + count  + "]";
+		String courses = "";
+		for(int i = 0; i< count; i++) {
+			courses += arr[i] + "\n";
+		}
+		return "CourseBag [" + courses + "]\ncount=" + count  + "\n";
 	}
 
 }

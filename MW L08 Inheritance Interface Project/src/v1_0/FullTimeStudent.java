@@ -1,9 +1,7 @@
 package v1_0;
 
 public class FullTimeStudent extends Student {
-	private final static double FLAT_RATE = 4500;
-	private final static double RATE_PER_CREDIT = 350;
-	private final static int SURCHARGE_THRESHOLD = 18;
+	
 //	private int credits;
 
 	public FullTimeStudent(Name name, String major, int credits, CourseBag theBag) {

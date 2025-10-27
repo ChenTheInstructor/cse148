@@ -58,7 +58,7 @@ public abstract class Student extends Person implements TuitionPayable, GPACompu
 
 	@Override
 	public String toString() {
-		return "\n[" + super.toString() + ", major=" + major + ", theBag=" + theBag + "]";
+		return "\n[" + super.toString() + "\nmajor=" + major + ", theBag=" + theBag + "]";
 	}
 
 	

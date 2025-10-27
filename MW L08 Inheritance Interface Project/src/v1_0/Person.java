@@ -1,7 +1,7 @@
 package v1_0;
 
 public abstract class Person implements ParkingFeePayable {
-	private final int PARKING_RATE_PER_PERIOD = 2;
+	
 	private final String id;
 	private Name name;
 	private static int idCount = 1;

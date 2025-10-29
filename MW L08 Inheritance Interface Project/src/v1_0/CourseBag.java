@@ -1,6 +1,7 @@
 package v1_0;
 
 import java.util.Arrays;
+import java.util.function.Predicate;
 
 public class CourseBag {
 	private Course[] arr;
@@ -11,26 +12,38 @@ public class CourseBag {
 		count = 0;
 	}
 	
-	public Course[] searchByLetterGrade(String letterGrade) {
+	public Course[] search(Predicate<Course> predicate) {
 		Course[] temp = new Course[count];
 		int matchCount = 0;
+		
 		for(int i = 0; i < count; i++) {
-			if(arr[i].getLetterGrade().equalsIgnoreCase(letterGrade)) {
+			if(predicate.test(arr[i])) {
 				temp[matchCount++] = arr[i];
 			}
 		}
-//		return temp;
 		return Arrays.copyOf(temp, matchCount);
 	}
 	
-	public Course searchByTitle(String title) {
-		for(int i = 0; i < count; i++) {
-			if(arr[i].getTITLE().equalsIgnoreCase(title)) {
-				return arr[i];
-			}
-		}
-		return null;
-	}
+//	public Course[] searchByLetterGrade(String letterGrade) {
+//		Course[] temp = new Course[count];
+//		int matchCount = 0;
+//		for(int i = 0; i < count; i++) {
+//			if(arr[i].getLetterGrade().equalsIgnoreCase(letterGrade)) {
+//				temp[matchCount++] = arr[i];
+//			}
+//		}
+////		return temp;
+//		return Arrays.copyOf(temp, matchCount);
+//	}
+//	
+//	public Course searchByTitle(String title) {
+//		for(int i = 0; i < count; i++) {
+//			if(arr[i].getTITLE().equalsIgnoreCase(title)) {
+//				return arr[i];
+//			}
+//		}
+//		return null;
+//	}
 
 	public Course[] getCourseArray() {
 		return arr;

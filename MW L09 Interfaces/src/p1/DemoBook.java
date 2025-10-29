@@ -1,6 +1,8 @@
 package p1;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 
 public class DemoBook {
 
@@ -12,11 +14,20 @@ public class DemoBook {
 		
 		Book[] arr = {b1, b2, b3, b4};
 		System.out.println(Arrays.toString(arr));
-		Arrays.sort(arr);
+		Arrays.sort(arr); // Arrays sort an array
 		System.out.println("After sorting: ");
 		System.out.println(Arrays.toString(arr));
 		
-		
+		ArrayList<Book> list = new ArrayList<>();
+		list.add(b1);
+		list.add(b2);
+		list.add(b3);
+		list.add(b4);
+		System.out.println("\n The original list: ");
+		System.out.println(list);
+		System.out.println("\n The sorted list: ");
+		Collections.sort(list); // Collections sort lists
+		System.out.println(list);
 		
 //		Book b3 = b1; // shallow copy: the address is copied
 ////		Book b4 = b2; // shallow copy: the address is copied

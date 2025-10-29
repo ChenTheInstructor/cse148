@@ -71,8 +71,8 @@ public class Book implements Comparable<Book>{
 
 	@Override
 	public int compareTo(Book o) {
-		return -this.title.compareTo(o.title);
-//		return -Double.compare(this.price, o.price);
+//		return this.title.compareTo(o.title);
+		return Double.compare(this.price, o.price);
 //		return Integer.compare(this.year, o.year);
 	}
 

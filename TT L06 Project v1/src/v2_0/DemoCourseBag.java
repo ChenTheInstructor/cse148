@@ -29,6 +29,11 @@ public class DemoCourseBag {
 		System.out.println("Course(s) found: ");
 		arr = theBag.search((course) -> course.getLetterGrade() != null && course.getLetterGrade().compareTo("B") <= 0);
 		System.out.println(Arrays.toString(arr));
+		
+		System.out.println("CSE courses taken: ");
+		arr = theBag.search((c) -> c.getTITLE().substring(0, 3).equalsIgnoreCase("CSE") && 
+				c.getLetterGrade().equals("A"));
+		System.out.println(Arrays.toString(arr));
 	}
 
 }

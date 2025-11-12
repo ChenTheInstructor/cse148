@@ -10,6 +10,8 @@ public class Demo {
 		
 		p1.setGreetingBehavior((n) -> System.out.println("Bye " + n));
 		
+		GreetingBehavior gp = p1.getGreetingBehavior();
+		
 		p1.performGreeting();
 	}
 

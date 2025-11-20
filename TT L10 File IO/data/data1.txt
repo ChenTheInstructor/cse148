@@ -1,0 +1,8 @@
+firstName lastName major GPA age
+John1 Doe1 IT 1.5 17
+John2 Doe2 CS 2.5 18
+John3 Doe3 MA 1.0 19
+John4 Doe EN 4.5 20
+John5 Doe PH 1.7 20
+John6 Doe4 CS 4.5 20
+Jose Hernandez IT 4.0 40
